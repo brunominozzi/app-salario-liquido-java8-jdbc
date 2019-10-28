@@ -1,0 +1,50 @@
+package com.ccee.projetotestejava.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.ccee.projetotestejava.factory.ConnectionDataFactory;
+import com.ccee.projetotestejava.model.Descontos;
+
+/**
+ * Classe Dao responsável pelos acessos a tabela 'descontos'
+ * 
+ * @author bruno.minozzi
+ * @since 26/10/2019
+ *
+ */
+public class DescontosDao {
+
+    private Connection connection;
+
+    public DescontosDao() {
+        this.connection = new ConnectionDataFactory().getConnection();
+    }
+    
+    public List<Descontos> getListaDescontos() {
+        try {
+            List<Descontos> listaDescontos = new ArrayList<Descontos>();
+            PreparedStatement stmt = this.connection.
+                    prepareStatement("select * from Descontos");
+            ResultSet rs = stmt.executeQuery();
+
+            while (rs.next()) {
+            	Descontos descontos = new Descontos();
+            	descontos.setIdDesconto(rs.getInt("id_desconto"));
+            	descontos.setIdFuncionario(rs.getInt("id_funcionario"));
+            	descontos.setValorSalarioBruto(rs.getBigDecimal("nm_cliente"));
+
+            	listaDescontos.add(Descontos);
+            }
+            rs.close();
+            stmt.close();
+            return Descontoss;
+        } catch (SQLException e) {
+        	throw new DescontosDaoException(e.getMessage(), e.getCause());
+        }
+    }
+}

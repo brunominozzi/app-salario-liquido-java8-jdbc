@@ -1,0 +1,24 @@
+package com.ccee.projetotestejava.dao;
+
+import java.sql.Connection;
+
+import com.ccee.projetotestejava.factory.ConnectionDataFactory;
+
+/**
+ * Classe Dao responsável pelos acessos a tabela 'funcionario'
+ * 
+ * @author bruno.minozzi
+ * @since 26/10/2019
+ *
+ */
+public class FuncionarioDao {
+
+    private Connection connection;
+
+    public FuncionarioDao() {
+        this.connection = new ConnectionDataFactory().getConnection();
+    }
+    
+    
+
+}

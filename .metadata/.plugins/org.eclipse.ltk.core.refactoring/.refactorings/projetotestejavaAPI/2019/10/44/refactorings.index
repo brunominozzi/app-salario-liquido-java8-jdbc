@@ -1,0 +1,11 @@
+1572150038807	Delete element
+1572152170675	Copy package
+1572152183501	Copy package
+1572152192912	Copy package
+1572154618604	Rename type 'DescontoDaoException'
+1572159463017	Rename compilation unit 'DescontosDaoException.java'
+1572159472998	Delete element
+1572162479275	Rename type 'Descontos'
+1572162499401	Rename type 'Funcionario'
+1572166536453	Rename type 'FuncionarioVO'
+1572168967715	Extract method 'calcularSalarioLiquido'

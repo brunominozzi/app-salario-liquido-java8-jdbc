@@ -1,0 +1,35 @@
+package com.ccee.projetotestejava.exception;
+
+/**
+ * Unchecked exception lançada na classe 'DescontosDao' 
+ * quando ocorre um erro de conexão ao Banco de Dados.
+ * 
+ * @author bruno.minozzi
+ * @since 27/10/2019
+ */
+public class DescontosDaoException extends RuntimeException {
+
+	private static final long serialVersionUID = 1L;
+
+	public DescontosDaoException() {
+		super();
+	}
+
+	public DescontosDaoException(String message, Throwable cause, boolean enableSuppression,
+			boolean writableStackTrace) {
+		super(message, cause, enableSuppression, writableStackTrace);
+	}
+
+	public DescontosDaoException(String message, Throwable cause) {
+		super(message, cause);
+	}
+
+	public DescontosDaoException(String message) {
+		super(message);
+	}
+
+	public DescontosDaoException(Throwable cause) {
+		super(cause);
+	}
+	
+}

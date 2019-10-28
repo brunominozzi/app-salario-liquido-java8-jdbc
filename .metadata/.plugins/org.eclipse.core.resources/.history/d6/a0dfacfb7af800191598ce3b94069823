@@ -1,0 +1,5 @@
+package com.ccee.projetotestejava.dao;
+
+public class DescontosDao {
+
+}

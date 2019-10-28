@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\projetos\java\bruno_minozzi\.metadata\.plugins\org.eclipse.jdt.core
+651871669.index
+2645812003.index
+113558702.index
